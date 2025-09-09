@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John Smith | Photographer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #333;
+      --accent: #e67e22;
+      --bg: #f9f9f9;
+      --card-bg: #fff;
+      --text: #222;
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      align-items: center;
+    }
+
+    .about-img {
+      flex: 1 1 180px;
+      max-width: 180px;
+      margin-right: 2rem;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    }
+
+    .about-img img {
+      width: 100%;
+      display: block;
+    }
+
+    .about-text {
+      flex: 2 1 300px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-align: center;
+      color: var(--primary);
+      box-shadow: var(--shadow);
+      transition: 0.2s ease;
+    }
+
+    .skill-card:hover {
+      background: var(--accent);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1rem;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      color: var(--primary);
+    }
+
+    form {
+      background: var(--card-bg);
+      padding: 2rem;
+      max-width: 500px;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.7rem 2rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-img {
+        margin: 0 0 1rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>John Smith</h1>
+    <p>Freelance Photographer | Capturing Moments</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <section id="about" class="about">
+      <div class="about-img">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith">
+      </div>
+      <div class="about-text">
+        <h2 class="section-title">About Me</h2>
+        <p>
+          I'm John, a freelance photographer based in New York. I specialize in capturing real emotions and natural beauty through the lens. From weddings to wildlife, my passion is telling stories through images.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Photography Styles</h2>
+      <div class="skills">
+        <div class="skill-card">Portrait</div>
+        <div class="skill-card">Landscape</div>
+        <div class="skill-card">Wedding</div>
+        <div class="skill-card">Wildlife</div>
+        <div class="skill-card">Street</div>
+        <div class="skill-card">Product</div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2 class="section-title">Portfolio</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img class="project-img" src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=600&q=80" alt="Project 1">
+          <div class="project-content">
+            <div class="project-title">Sunset in Sahara</div>
+            <div class="project-desc">Captured the golden hour light in the heart of the desert.</div>
+            <a class="project-link" href="#">View Full</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-img" src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=600&q=80" alt="Project 2">
+          <div class="project-content">
+            <div class="project-title">Urban Life</div>
+            <div class="project-desc">Street photography showing human connection in busy cities.</div>
+            <a class="project-link" href="#">View Full</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-img" src="https://images.unsplash.com/photo-1520975918311-ff1b6bfbf8d5?auto=format&fit=crop&w=600&q=80" alt="Project 3">
+          <div class="project-content">
+            <div class="project-title">Wedding Moments</div>
+            <div class="project-desc">Capturing love, laughter, and timeless
+
+
+
+
