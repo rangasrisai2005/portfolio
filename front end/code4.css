@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>John Smith | Developer Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fafafa;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    aside {
+      width: 260px;
+      background: #222;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+      position: fixed;
+      height: 100vh;
+    }
+
+    aside h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    aside p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      color: #bbb;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    /* Main content */
+    main {
+      margin-left: 260px;
+      padding: 2rem;
+      flex-grow: 1;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      color: #4caf50;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #4caf50;
+      padding-bottom: 0.25rem;
+    }
+
+    /* About */
+    #about p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* Skills */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill {
+      background-color: #e0f2f1;
+      color: #00796b;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Projects */
+    .project {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+      transition: box-shadow 0.3s;
+    }
+
+    .project:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+      color: #00796b;
+    }
+
+    .project p {
+      margin-bottom: 0.7rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .project a {
+      text-decoration: none;
+      color: #4caf50;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .project a:hover {
+      color: #1b5e20;
+    }
+
+    /* Contact form */
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+      max-width: 500px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    form button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.8rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #388e3c;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: space-between;
+      }
+
+      aside h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+      }
+
+      aside p {
+        display: none;
+      }
+
+      nav {
+        flex-direction: row;
+        gap: 0.8rem;
+        align-items: center;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 1rem;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>John Smith</h1>
+    <p>JavaScript Developer</p>
+    <nav>
+      <a href="#about" class="active">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
