@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem 1.5rem;
+    align-items: center;
+  }
+
+  /* On small screens stack labels and inputs */
+  @media (max-width: 600px) {
+    form {
+      grid-template-columns: 1fr;
+    }
+
+    label {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  label {
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  /* Gender radios container spans the whole row */
+  .gender-group {
+    grid-column: 2 / 3;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .gender-group {
+      grid-column: 1;
+    }
+  }
+
+  .gender-group label {
+    font-weight: normal;
+  }
+
+  button {
+    grid-column: 2 / 3;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #0077cc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #005fa3;
+  }
+
+  /* On mobile, button takes full width */
+  @media (max-width: 600px) {
+    button {
+      grid-column: 1;
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<form>
+  <label for="fullname">Full Name</label>
+  <input type="text" id="fullname" name="fullname" required />
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="course">Course Selection</label>
+  <select id="course" name="course" required>
+    <option value="">-- Select a course --</option>
+    <option value="html-css">HTML & CSS</option>
+    <option value="javascript">JavaScript</option>
+    <option value="python">Python</option>
+  </select>
+
+  <label>Gender</label>
+  <div class="gender-group">
+    <label><input type="radio" name="gender" value="male" required /> Male</label>
+    <label><input type="radio" name="gender" value="female" /> Female</label>
+    <label><input type="radio" name="gender" value="other" /> Other</label>
+  </div>
+
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" required />
+
+  <label for="confirm-password">Confirm Password</label>
+  <input type="password" id="confirm-password" name="confirm-password" required />
+
+  <button type="submit">Register</button>
+</form>
+
+</body>
+</html>
